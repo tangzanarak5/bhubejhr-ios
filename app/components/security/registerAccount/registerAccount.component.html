@@ -1,0 +1,11 @@
+<ActionBar title="สร้างบัญชี" class="action-bar"></ActionBar>
+<StackLayout class="Cloud-Light" >
+    <Label text = "ลงทะเบียนภูเบศรแคร์" class="labelTitle sizeFontTitle fontBlack"></Label>
+    <label text=" "></label>
+    <TextField  keyboardType = "number" [(ngModel)]="checkRegister.idCard" hint="หมายเลขบัตรประชาชน" class="sizeInput sizeFont" maxLength="13"></TextField>
+    <label text=" "></label>
+    <TextField  keyboardType = "number" [(ngModel)]="checkRegister.hn" hint="หมายเลข HN" class="sizeInput sizeFont" maxLength="13"></TextField>
+    <label text=" "></label>
+    <Button class="btn btn-primary Button Cloud-Light sizeFont" text = "ตรวจสอบ" (tap)="checkIdCardAndHn()"></Button>
+</StackLayout>
+

@@ -1,0 +1,8 @@
+<ActionBar title="ตรวจสอบผลการลงทะเบียน" class="action-bar"></ActionBar>
+<StackLayout class="Cloud-Light">
+    <Label text = "ตรวจสอบการลงทะเบียน" class="labelTitle sizeFontTitle fontBlack"></Label>
+    <label text=" "></label>
+    <TextField keyboardType = "number" [(ngModel)]="checkHn.idCard" hint="หมายเลขบัตรประชาชน" class="sizeInput sizeFont" maxLength="13"></TextField>
+    <label text=" "></label>
+    <Button class="btn btn-primary Button sizeFont Cloud-Light" text = "ตรวจสอบ" (tap)="checkIdCard()"></Button>
+</StackLayout>
