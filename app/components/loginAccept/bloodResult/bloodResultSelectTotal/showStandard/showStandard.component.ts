@@ -3,8 +3,9 @@ import { ModalDialogParams } from "nativescript-angular/directives/dialogs";
 import { DatePicker } from "ui/date-picker";
 import { securityService } from "../../../../security/security.service";
 import { standard } from "../../../../security/model/standard.model"
+import { Router, ActivatedRoute } from "@angular/router";
 @Component({
-    selector: "my-modal",
+    selector: "showStandard",
     templateUrl: "showStandard.component.html",
     styleUrls: ['showStandard.component.css'],
     moduleId: module.id
@@ -12,7 +13,6 @@ import { standard } from "../../../../security/model/standard.model"
 export class showStandardComponent {
     dataUser ;
     standard: standard ;
-    public frameworks: Array<string>;
     dataStandard = [
         {
             dataText: "   - ปกติ 70 -100 mg/dL\n   - สูงกว่าปกติ 100-125 mg/dL\n   - สูงมาก 126 mg/dL\n"
@@ -34,7 +34,8 @@ export class showStandardComponent {
         }
     ] ;
     i ;
-    public constructor(private params: ModalDialogParams) {   
+    public constructor(private route: ActivatedRoute,
+        private router: Router) {   
     }
     configure(datePicker: DatePicker) {
     }
@@ -61,9 +62,6 @@ export class showStandardComponent {
         else if (this.standard.name == "ชีพจร") {
             this.i = 5 ;
         }
-    }
-    public close(res: Date) {
-        this.params.closeCallback(res);
     }
 
 }

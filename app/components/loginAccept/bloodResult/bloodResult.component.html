@@ -1,24 +1,24 @@
 
-<ActionBar>
-        <StackLayout>
+<ActionBar title="ผลเลือด" class="bg w">
+        <!-- <StackLayout class="bg">
                 <GridLayout width="100%" height="100%">
                         <Label horizontalAlignment="right" class="mdi rights" [text]="'mdi-menu' | fonticon" (tap) = "openDrawer()"></Label>
-                        <label horizontalAlignment="center" class="setCenter Cloud-Lights" text="ผลเลือด"></label>
+                        <label horizontalAlignment="center" class="setCenter Cloud-Lights w" text="ผลเลือด"></label>
                 </GridLayout>
-        </StackLayout>
+        </StackLayout> -->
 </ActionBar>
 
 
-<ListView [items]="disease" (itemTap)="onItemTap($event)">
+<ListView [items]="disease" (itemTap)="onItemTap($event)" width="100%" height="100%">
         <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
                 <StackLayout [class.odd]="odd" [class.even]="even">
-                        <label [text]="i"></label>
-                        <!-- <GridLayout columns="10, 59, *" rows="20, 25, 30" width="100%" height="100%">
+                        <GridLayout columns="10, 250, *" rows="20, 25, 25, 20" >
                                 <label row="0" col="0" text=""></label>
                                 <Label row="1" col="1" class = "Cloud-Light black" [text]='(i+1) + ". " + item.namee'></Label>
                                 <label row="1" col="3" class = "Cloud-Light2 setCenter" text="รายละเอียด"></label>
                                 <Label row="2" col="1" class = "Cloud-Light2 black" [text]='item.namet'></Label>
-                        </GridLayout> -->
+                                <label row="3" col="0" text=""></label>
+                        </GridLayout>
                 </StackLayout>
         </ng-template>
 </ListView>

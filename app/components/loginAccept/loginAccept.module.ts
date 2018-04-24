@@ -25,6 +25,8 @@ import { medicineSelectComponent } from "./medicine/medicineSelect/medicineSelec
 import { medicineSelectOneComponent } from "./medicine/medicineSelectOne/medicineSelectOne.component";
 import { selectCostComponent } from "./cost/selectCost/selectCost.component";
 import { bloodChartComponent } from "./bloodResult/bloodChart/bloodChart.component";
+import { NativeScriptUIChartModule } from "nativescript-ui-chart/angular";
+import { bloodChartService } from "./bloodResult/bloodChart/bloodChart.service";
 
 @NgModule({
 
@@ -33,6 +35,7 @@ import { bloodChartComponent } from "./bloodResult/bloodChart/bloodChart.compone
         LoginAcceptRouting,
         NativeScriptFormsModule,
         NativeScriptUISideDrawerModule,
+        NativeScriptUIChartModule,
         TNSFontIconModule.forRoot({
             'mdi': 'material-design-icons.css'
           })
@@ -58,7 +61,8 @@ import { bloodChartComponent } from "./bloodResult/bloodChart/bloodChart.compone
     ],
     providers: [
         ModalDialogService,
-        loginProfileService
+        loginProfileService,
+        bloodChartService 
     ],
     schemas: [
         NO_ERRORS_SCHEMA

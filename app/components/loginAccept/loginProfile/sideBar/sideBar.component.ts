@@ -181,8 +181,10 @@ export class sideBarComponent implements AfterViewInit, OnInit {
         }
         if (args.index == 8) {
             this.loader.show(this.options);
-            this.drawer.closeDrawer();
-            this.logout();
+            this.isLoading = false ;
+            securityService.setIsLogin = ""
+            securityService.setDataUser = ""
+            this.router.navigate(["/security/standbytologin"]);
             this.loader.hide();
         }
     }
@@ -295,13 +297,14 @@ export class sideBarComponent implements AfterViewInit, OnInit {
             // result argument is boolean
             console.log("Dialog result: " + result);
             if (result == false) {
-                this.isLoading = false ;
-                securityService.setIsLogin = ""
-                securityService.setDataUser = ""
-                this.loader.show(this.options);
-                this.drawer.closeDrawer();
+                // this.isLoading = false ;
+                // securityService.setIsLogin = ""
+                // securityService.setDataUser = ""
+                // this.loader.show(this.options);
+                // this.drawer.closeDrawer();
                 this.router.navigate(["/security/standbytologin"]);
-                this.loader.hide();
+                this.drawer.closeDrawer();
+                // this.loader.hide();
             }
         });  
     }

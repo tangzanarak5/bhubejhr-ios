@@ -352,14 +352,7 @@ export class bloodResultSelectTotalComponent implements OnInit {
         this.router.navigate(["/bloodResultSelect"]);
     }
     showStandard () {
-        console.log("ok");
-        let options = {
-            context: {},
-            fullscreen: false,
-            viewContainerRef: this.vcRef
-        };
-        this.modal.showModal(showStandardComponent, options).then(res => {
-        });
+        this.router.navigate(["/showStandard"]);
     }
     toBloodChart () {
         console.log("connect");
@@ -369,15 +362,15 @@ export class bloodResultSelectTotalComponent implements OnInit {
 // ***********************************************************************************************************
         if (this.selectBloodResult.name == "ชีพจร") {
             if (i > 140 || i < 30) {
-                this.bloodResult = "~/images/red.png" ;
+                this.bloodResult = "~/images/rh.png" ;
                 return true ;
             }
             else if (i > 100 && i > 60) {
-                this.bloodResult = "~/images/yellow.png" ;
+                this.bloodResult = "~/images/yh.png" ;
                 return true ;
             }
             else if (i >= 60 && i <= 100) {
-                this.bloodResult = "~/images/green.png" ;
+                this.bloodResult = "~/images/gh.png" ;
                 return true ;
             }
         }
@@ -386,7 +379,7 @@ export class bloodResultSelectTotalComponent implements OnInit {
             if (i.substring(2,3) == " ") {
                     if (i.substring(4,5) == " ") {
                         if (parseInt(i.substring(0,2)) <= 99 && parseInt(i.substring(5,7)) <= 79) {
-                            this.bloodResult = "~/images/green.png" ;
+                            this.bloodResult = "~/images/gh.png" ;
                             return true ;
                     }
                 }
@@ -394,15 +387,15 @@ export class bloodResultSelectTotalComponent implements OnInit {
             if (i.substring(3,4) == " ") {
                 if (i.substring(5,6) == " ") {
                     if (parseInt(i.substring(0,3)) <= 120 && parseInt(i.substring(5,7)) <= 79) {
-                        this.bloodResult = "~/images/green.png" ;
+                        this.bloodResult = "~/images/gh.png" ;
                         return true ;
                     }
                     if (parseInt(i.substring(0,3)) <= 160 && parseInt(i.substring(5,8)) <= 100) {
-                        this.bloodResult = "~/images/yellow.png" ;
+                        this.bloodResult = "~/images/yh.png" ;
                         return true ;
                     }
                     if (parseInt(i.substring(0,3)) >= 180 && parseInt(i.substring(5,8)) >= 110) {
-                        this.bloodResult = "~/images/red.png" ;
+                        this.bloodResult = "~/images/rh.png" ;
                         return true ;
                     }
                 }
@@ -411,60 +404,60 @@ export class bloodResultSelectTotalComponent implements OnInit {
 // *************************************************************************************************************
         if (this.selectBloodResult.name == "คอเลสเตอรอลที่ดี") {
             if (i < 40 || i > 60) {
-                this.bloodResult = "~/images/red.png" ;
+                this.bloodResult = "~/images/rh.png" ;
                 return true ;
             }
             if (i >= 45 && i <= 55) {
-                this.bloodResult = "~/images/green.png" ;
+                this.bloodResult = "~/images/gh.png" ;
                 return true ;
             }
             if (i > 45 && i > 55) {
-                this.bloodResult = "~/images/yellow.png" ;
+                this.bloodResult = "~/images/yh.png" ;
                 return true ;
             }
         }
  // ****************************************************************************************************
         if (this.selectBloodResult.name == "ไขมันไม่ดี") {
             if (i <= 100) {
-                this.bloodResult = "~/images/green.png" ;
+                this.bloodResult = "~/images/gh.png" ;
                 return true ;
             }
             if (i > 100 && i < 160) {
-                this.bloodResult = "~/images/yellow.png" ;
+                this.bloodResult = "~/images/yh.png" ;
                 return true ;
             }
             if (i >= 160) {
-                this.bloodResult = "~/images/red.png" ;
+                this.bloodResult = "~/images/rh.png" ;
                 return true ;
             }
         }
 // **************************************************************************************************
         if (this.selectBloodResult.name == "ระดับน้ำตาลในเลือด") {
             if (i <= 100 && i >= 70) {
-                this.bloodResult = "~/images/green.png" ;
+                this.bloodResult = "~/images/gh.png" ;
                 return true ;
             }
             if (i > 100 && i <= 125) {
-                this.bloodResult = "~/images/yellow.png" ;
+                this.bloodResult = "~/images/yh.png" ;
                 return true ;
             }
             if (i > 125) {
-                this.bloodResult = "~/images/red.png" ;
+                this.bloodResult = "~/images/rh.png" ;
                 return true ;
             }
         }
     // ***********************************************************************************************
         if (this.selectBloodResult.name == "ระดับน้ำตาลเฉลี่ยในเลือด") {
             if (parseFloat(i) < 5.7) {
-                this.bloodResult = "~/images/green.png" ;
+                this.bloodResult = "~/images/gh.png" ;
                 return true ;
             }
             if (parseFloat(i) >= 5.7 && parseFloat(i) <= 6.4) {
-                this.bloodResult = "~/images/yellow.png" ;
+                this.bloodResult = "~/images/yh.png" ;
                 return true ;
             }
             if (parseFloat(i) > 6.4) {
-                this.bloodResult = "~/images/red.png" ;
+                this.bloodResult = "~/images/rh.png" ;
                 return true ;
             }
         }

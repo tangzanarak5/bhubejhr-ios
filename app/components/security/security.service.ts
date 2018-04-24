@@ -54,4 +54,68 @@ export class securityService {
     return !!getString("isLogin");
   }
 
+  static set setSelectBlood(selectBloodJson: string){
+    setString("selectBlood",selectBloodJson);
+  }
+  
+  static get getSelectBlood(): string {
+    return getString("selectBlood");
+  }
+
+  static set setSelectBloodResult(selectBloodResultJson: string){
+    setString("selectBloodResult",selectBloodResultJson);
+  }
+  
+  static get getSelectBloodResult(): string {
+    return getString("selectBloodResult");
+  }
+
+  static set setInfo(infoJson: string){
+    setString("info",infoJson);
+  }
+  
+  static get getInfo(): string {
+    return getString("info");
+  }
+
+  static set setStandard(standardJson: string){
+    setString("standard",standardJson);
+  }
+  
+  static get getStandard(): string {
+    return getString("standard");
+  }
+
+  static set setDiseases(diseasesJson: string){
+    setString("diseases",diseasesJson);
+  }
+  
+  static get getDiseases(): string {
+    return getString("diseases");
+  }
+
+  static set setMedicineSelect(medicineSelectJson: string){
+    setString("medicineSelect",medicineSelectJson);
+  }
+  
+  static get getMedicineSelect(): string {
+    return getString("medicineSelect");
+  }
+
+  static set setCostSelect(costSelectJson: string){
+    setString("costSelect",costSelectJson);
+  }
+  
+  static get getCostSelect(): string {
+    return getString("costSelect");
+  }
+
+  static set setMeet(meetJson: string){
+    setString("meet",meetJson);
+  }
+  
+  static get getMeet(): string {
+    return getString("meet");
+  }
+
 }

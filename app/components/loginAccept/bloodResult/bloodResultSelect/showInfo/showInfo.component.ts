@@ -3,8 +3,9 @@ import { ModalDialogParams } from "nativescript-angular/directives/dialogs";
 import { DatePicker } from "ui/date-picker";
 import { securityService } from "../../../../security/security.service";
 import { info } from "../../../../security/model/info.model"
+import { Router, ActivatedRoute } from "@angular/router";
 @Component({
-    selector: "my-modal",
+    selector: "showInfo",
     templateUrl: "showInfo.component.html",
     styleUrls: ['showInfo.component.css'],
     moduleId: module.id
@@ -12,7 +13,6 @@ import { info } from "../../../../security/model/info.model"
 export class showInfoComponent {
     dataUser ;
     info: info ;
-    public frameworks: Array<string>;
     dataInfo = [
         {
             dataText: "   น้ำตาลในกระแสเลือด หมายถึง ระดับกลูโคสในเลือด กลูโคสในเลือดมาจากอาหารที่เรารับประทาน เช่น อาหารแป้ง ไขมัน หรือโปรตีน นอกจากนั้นน้ำตาลในเลือดส่วนหนึ่งมาจากกรสร้าง เช่นจากตับ หรือการหลั่งจากน้ำตาลที่สะสมที่ตับ ตับอ่อนจะผลิตฮอร์โมนที่ชื่อว่า อินซูลินเพื่อนำน้ำตาลเข้าเซลล์"
@@ -34,7 +34,8 @@ export class showInfoComponent {
         }
     ] ;
     i ;
-    public constructor(private params: ModalDialogParams) {   
+    public constructor(private route: ActivatedRoute,
+        private router: Router) {   
     }
     configure(datePicker: DatePicker) {
     }
@@ -61,9 +62,6 @@ export class showInfoComponent {
         else if (this.info.name == "ชีพจร") {
             this.i = 5 ;
         }
-    }
-    public close(res: Date) {
-        this.params.closeCallback(res);
     }
 
 }

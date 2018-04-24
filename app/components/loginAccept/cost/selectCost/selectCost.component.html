@@ -1,9 +1,8 @@
 
-<ActionBar class="bg">
+<ActionBar title="ยอดชำระ" class="bg w">
     <StackLayout>
             <GridLayout width="100%" height="100%">
                 <Label horizontalAlignment="right" class="mdi rights" [text]="'mdi-menu' | fonticon" (tap) = "openDrawer()"></Label>
-                <Label horizontalAlignment="left" class="mdi" [text]="'mdi-arrow-back' | fonticon" (tap) = "toBack()"></Label>
                 <label horizontalAlignment="center" class="setCenter w Cloud-Lights" text='ยอดชำระ'></label>
             </GridLayout>
     </StackLayout>
@@ -15,13 +14,13 @@
         <label class = "Cloud-Light4 black" [text]='"   ยอดชำระวันที่ " + costSelect.numberDate'></label>
 </StackLayout>
 <StackLayout>
-    <ListView [items]="costTotal" (itemTap)="onItemTap($event)">
+    <ListView [items]="costTotal" (itemTap)="onItemTap($event)" width="100%" height="100%">
         <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
-                <StackLayout class="mtop" [class.odd]="odd" [class.even]="even">
-                        <GridLayout *ngIf = "checkDate(item.date)" columns="55, *, 170, *" rows="10, 20, 10, 30, 30, 30, 30, 30, 10, 30" width="100%" height="100%">
+                <StackLayout class="" [class.odd]="odd" [class.even]="even">
+                        <GridLayout *ngIf = "checkDate(item.date)" columns="55, *, 170, *" rows="10, 20, 10, 30, 30, 30, 30, 30, 10, 30" >
                                 <label row="0" col="0" text=""></label>
-                                <label row="1" col="0" class = "Cloud-Light right" text=""></label>
-                                <Label row="1" col="1" class = "Cloud-Light2 black bdb" text="รายการ"></Label>
+                                <label row="1" col="0" class = "Cloud-Light " text=""></label>
+                                <Label row="1" col="1" class = "" text="รายการ"></Label>
                                 <label row="1" col="2" class = "Cloud-Light right bdb" text="ราคา"></label>
                                 <label row="1" col="3" class = "Cloud-Light right" text=""></label>
                                 <Label row="2" col="1" class = "Cloud-Light2 black" text=""></Label>

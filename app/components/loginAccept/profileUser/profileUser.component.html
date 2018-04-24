@@ -1,18 +1,17 @@
 
-<ActionBar class="bg">
-        <StackLayout>
+<ActionBar title="ประวัติส่วนตัว" class="bg w">
+        <!-- <StackLayout>
                 <GridLayout width="100%" height="100%">
                         <Label horizontalAlignment="right" class="mdi rights" [text]="'mdi-menu' | fonticon" (tap) = "openDrawer()"></Label>
-                        <Label horizontalAlignment="left" class="mdi" [text]="'mdi-arrow-back' | fonticon" (tap) = "toBack()"></Label>
                         <label horizontalAlignment="center" class="setCenter w Cloud-Lights" text="ประวัติส่วนตัว"></label>
                 </GridLayout>
-        </StackLayout>
+        </StackLayout> -->
 </ActionBar>
 
 <ScrollView sdkExampleTitle sdkToggleNavButton>
 <StackLayout>
         <sidebar #sidebar></sidebar>
-        <GridLayout columns="15, 111, *, 15" rows="20, 25, 20, 25, 20, 25, 20, 25, 20, 25, 20, 25, 20, 25, 20, 25, 20, 25, 20, 25" width="100%" height="100%">
+        <GridLayout columns="15, 111, *, 15" rows="20, 25, 20, 25, 20, 25, 20, 25, 20, 25, 20, 25, 20, 25, 20, 45, 20, 25, 20, 25" width="100%" height="100%">
                 <label row="1" col="0" text=""></label>
                 <label row="1" col="3" class="bdb" text=""></label>
                 <Label row="1" col="1" class = "black Cloud-Light4 bdb" text="หมายเลขผู้ป่วย"></Label>
@@ -51,7 +50,7 @@
                 <label row="14" col="0" text=""></label>
                 <label row="15" col="3" class="bdb" text=""></label>
                 <Label row="15" col="1" class = "black Cloud-Light4 bdb" text="ที่อยู่"></Label>
-                <Label row="15" col="2" class="Cloud-Light right bdb" [text]="dataUser.dataset.address"></Label>
+                <textView row="15" col="2" class="Cloud-Light right bdb" editable= "false" [text]="dataUser.dataset.address"></textView>
         
                 <label row="16" col="0" text=""></label>
                 <label row="17" col="3" class="bdb" text=""></label>

@@ -42,7 +42,7 @@ export class selectCostComponent implements OnInit {
     totalMoney ;
     costTotal = [
         {
-            date : "27/01/2560",
+            date : "28/03/2561",
             type : "ความดันโลหิต",
             name1 : "เจาะเลือด",
             name2 : "ตรวจ PE",
@@ -56,7 +56,7 @@ export class selectCostComponent implements OnInit {
             data5 : "1000" //ค่ายา
         },
         {
-            date : "2/12/2559",
+            date : "28/06/2560",
             type : "ไขมัน",
             name1 : "เจาะเลือด",
             name2 : "ตรวจ PS",
@@ -70,7 +70,7 @@ export class selectCostComponent implements OnInit {
             data5 : "1000" //ค่ายา
         },
         {
-            date : "14/5/2559",
+            date : "28/01/2561",
             type : "เบาหวาน",
             name1 : "เจาะเลือด",
             name2 : "ตรวจปัสสาวะ",

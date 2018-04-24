@@ -130,7 +130,7 @@ export class bloodResultSelectComponent implements OnInit {
         this.info.numberIndex = "" ;
         securityService.setInfo = JSON.stringify(this.info);
         console.log(securityService.getInfo);
-
+        console.log(this.selectBlood.numberIndex);
         if (this.selectBlood.numberIndex == "0") {
             this.checkDM = true ;
         }
@@ -202,13 +202,7 @@ export class bloodResultSelectComponent implements OnInit {
         this.info.name = n ;
         securityService.setInfo = JSON.stringify(this.info);
         console.log(securityService.getInfo);
-        let options = {
-            context: {},
-            fullscreen: false,
-            viewContainerRef: this.vcRef
-        };
-        this.modal.showModal(showInfoComponent, options).then(res => {
-        });
+        this.router.navigate(["/showInfo"]);
     }
     private demoLoader() {
         setTimeout(() => {

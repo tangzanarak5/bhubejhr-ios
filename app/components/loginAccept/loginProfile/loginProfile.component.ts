@@ -94,7 +94,7 @@ export class loginProfileComponent implements OnInit {
         private router: Router,
         private loginProfileService: loginProfileService,
         page: Page) {
-            
+            page.actionBarHidden = true;
             route.url.subscribe((s:UrlSegment[]) => {
                 console.log("url", s);
             });
@@ -154,14 +154,6 @@ export class loginProfileComponent implements OnInit {
     }
     public showBarcode() {
         console.log("barcode");
-        let options = {
-            context: {},
-            fullscreen: false,
-            viewContainerRef: this.vcRef
-        };
-        this.modal.showModal(barCodeComponent, options).then(res => {
- 
-            
-        });
+        this.router.navigate(["/barCode"]);
     }
  }
